@@ -19,9 +19,10 @@ def home():
   2.安装x-ui
   3.安装更新必要依赖
   4.安装acme脚本
+  5.全部安装
     """
           )
-    nu = input("输入你的选择[0-4]：")
+    nu = input("输入你的选择[0-5]：")
     if nu == "0":
         exit()
     if nu == "1":
@@ -32,6 +33,8 @@ def home():
         install_yil()
     if nu == "4":
         install_acme()
+    if nu == "5":
+        allinstall()
     else:
         print("输入错误，请重新选择\n")
         home()
@@ -66,6 +69,14 @@ def install_acme():
     os.system(f"~/.acme.sh/.acme.sh --issue -d {domain} --standalone")
     print("开始复制证书到本地\n")
     os.system("~/.acme.sh/.acme.sh --install-cert -d --key-file /root/private.key --fullchain-file /root/cert.crt")
+    home()
+
+
+def allinstall():
+    install_docker()
+    install_yil()
+    install_xui()
+    install_acme()
     home()
 
 
