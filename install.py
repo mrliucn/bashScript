@@ -64,7 +64,7 @@ def install_acme():
     os.system("apt-get install socat")
     email = input("输入你的邮箱地址：")
     domain = input("输入要安装证书的域名：")
-    os.system(f"curl  https://get.acme.sh | sh -s email={email}")
+    os.system(f"curl https://get.acme.sh | sh -s email={email}")
     print("开始安装证书\n")
     os.system(f"~/.acme.sh/.acme.sh --issue -d {domain} --standalone")
     print("开始复制证书到本地\n")
