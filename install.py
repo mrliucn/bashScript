@@ -22,7 +22,6 @@ def home():
     """
           )
     nu = input("输入你的选择[0-4]：")
-    os.system("apt-get update && apt upgrade -y")
     if nu == "0":
         exit()
     if nu == "1":
@@ -39,22 +38,27 @@ def home():
 
 
 def install_docker():
+    os.system("apt-get update && apt upgrade -y")
     os.system("apt-get install curl -y")
     os.popen("curl -fsSL https://get.docker.com | bash")
     home()
 
 
 def install_xui():
+    os.system("apt-get update && apt upgrade -y")
     os.system("bash <(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)")
     home()
 
 
 def install_yil():
+    os.system("apt-get update && apt upgrade -y")
     os.system("apt-get install socat git curl vim wget")
     home()
 
 
 def install_acme():
+    os.system("apt-get update && apt upgrade -y")
+    os.system("apt-get install socat")
     email = input("输入你的邮箱地址：")
     domain = input("输入要安装证书的域名：")
     os.system(f"curl  https://get.acme.sh | sh -s email={email}")
@@ -66,6 +70,4 @@ def install_acme():
 
 
 if __name__ == '__main__':
-    # car("this is red", 3)
-    # car("tiis is green", 2)
     home()
