@@ -33,11 +33,11 @@ def home():
 def install_yi():
     print("\n替换源\n")
     os.system("sed -i 's@^\(deb.*stable main\)$@#\\1\\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/termux-packages-24 stable main@' $PREFIX/etc/apt/sources.list")
-    os.system("sed -i 's@^\(deb.*games stable\)$@#\\1\\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/game-packages-24 games stable@' $PREFIX/etc/apt/sources.list.d/game.list")
+    # os.system("sed -i 's@^\(deb.*games stable\)$@#\\1\\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/game-packages-24 games stable@' $PREFIX/etc/apt/sources.list.d/game.list")
     os.system("sed -i 's@^\(deb.*science stable\)$@#\\1\\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/science-packages-24 science stable@' $PREFIX/etc/apt/sources.list.d/science.list")
     print("\n安装依赖\n")
     os.system("pkg update && pkg upgrade -y")
-    os.system("pkg install git curl vim wget -y")
+    os.system("pkg install git curl vim wget tree -y")
     home()
 
 
