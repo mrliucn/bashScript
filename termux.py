@@ -37,7 +37,7 @@ def install_yi():
         "sed -i 's@^\(deb.*science stable\)$@#\\1\\ndeb https://mirrors.tuna.tsinghua.edu.cn/termux/science-packages-24 science stable@' $PREFIX/etc/apt/sources.list.d/science.list")
     print("\n安装依赖\n")
     os.system("pkg update && pkg upgrade -y")
-    os.system("pkg install git curl vim wget tree -y")
+    os.system("pkg install git curl vim wget tree openssh ffmpeg nmap figlet neofetch screenfetch -y")
     print("\n终端配色方案\n")
     os.system('sh -c "$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)"')
     os.system("ln -s /sdcard/Download d")
@@ -63,11 +63,14 @@ def install_node():
 
 
 def install_ar():
+    install_node()
     print("\n安装并配置Aria2\n")
     os.system("pkg install aria2 -y")
     os.system("cd $HOME && mkdir .aria2 && cd .aria2")
-    os.system("wget -O aria2.conf ")
+    os.system("wget -O aria2.conf https://github.com/mrliucn/bashScript/raw/main/conf/aria2.conf")
     os.system("touch aria2.session")
+    print("\n启动Aria2\n")
+    os.system("pm2 start 'aria2c --conf-path=$HOME/.aria2/aria2.conf'")
 
 
 if __name__ == '__main__':
