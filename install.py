@@ -63,7 +63,7 @@ def install_acme():
     domain = input("输入要安装证书的域名：")
     os.system(f"curl  https://get.acme.sh | sh -s email={email}")
     print("开始安装证书\n")
-    os.system(f"~/.acme.sh/.acme.sh --issue -d {domain}   --standalone")
+    os.system(f"~/.acme.sh/.acme.sh --issue -d {domain} --standalone")
     print("开始复制证书到本地\n")
     os.system("~/.acme.sh/.acme.sh --install-cert -d --key-file /root/private.key --fullchain-file /root/cert.crt")
     home()
