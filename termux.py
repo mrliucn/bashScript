@@ -24,7 +24,7 @@ def home():
     # if nu == "5":
     #     allinstall()
     else:
-        print("输入错误，请重新选择\n")
+        print("\n输入错误，请重新选择\n")
         home()
 
 
@@ -40,14 +40,14 @@ def install_yi():
     os.system("pkg install git curl vim wget tree openssh ffmpeg nmap figlet neofetch screenfetch -y")
     print("\n终端配色方案\n")
     os.system('sh -c "$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)"')
-    os.system("ln -s /sdcard/Download d")
+    os.system("cd $HOME && ln -s /sdcard/Download d")
     print("\n安装you-get和yt-dlp\n")
     os.system("pip install you-get yt-dlp")
     home()
 
 
 def install_node():
-    print("1.安装长期稳定版  2.安装最新版")
+    print("\n1.安装长期稳定版  2.安装最新版\n")
     u = input("输入你的选择[1-2]：")
     if u == "" or u == "1":
         os.system("pkg install nodejs-lts -y")
@@ -58,7 +58,6 @@ def install_node():
         install_node()
     print("\n安装PM2\n")
     os.system("npm install -g pm2 pnpm")
-    print("")
     home()
 
 
