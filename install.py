@@ -40,7 +40,7 @@ def home():
 def install_docker():
     os.system("apt-get update && apt upgrade -y")
     os.system("apt-get install curl -y")
-    os.popen("curl -fsSL https://get.docker.com | bash")
+    os.system("curl -fsSL https://get.docker.com | bash")
     home()
 
 
