@@ -13,6 +13,25 @@ def car(i, c=1):
 
 def home():
     print("""
+                          ./+o+-
+                  yyyyy- -yyyyyy+      
+               ://+//////-yyyyyyo      
+           .++ .:/++++++/-.+sss/`      
+         .:++o:  /++++++++/:--:/-      
+        o:+o+:++.`..```.-/oo+++++/    
+       .:+o:+o/.          `+sssoo+/    
+  .++/+:+oo+o:`             /sssooo.   
+ /+++//+:`oo+o               /::--:.   
+ \+/+o+++`o++o               ++////. 
+  .++.o+++oo+:`             /dddhhh.
+       .+.o+oo:.          `oddhhhh+
+        \+.++o+o``-````.:ohdhhhhh+
+         `:o+++ `ohhhhhhhhyo++os:
+           .o:`.syhhhhhhh/.oo++o`
+               /osyyyyyyo++ooo+++/
+                   ````` +oo+++o\:
+                          `oo++.
+    
   欢迎使用自制Linux安装脚本：
   0.退出脚本            1.安装 Docker
   2.安装 v2ray管理面版   3.安装 更新必要依赖
