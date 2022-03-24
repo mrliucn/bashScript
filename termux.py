@@ -4,12 +4,9 @@ import os
 def home():
     print("""
   欢迎使用自制Termux安装脚本
-  0.退出脚本
-  1.安装更新必要依赖+替换源
-  2.安装nodejs
-  3.安装Aria2
-    """
-          )
+  0.退出脚本      1.安装 更新必要依赖+换源
+  2.安装 node    3.安装 Aria2
+    """)
     nu = input("输入你的选择[0-5]：")
     if nu == "0":
         exit()

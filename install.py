@@ -13,13 +13,10 @@ def car(i, c=1):
 
 def home():
     print("""
-  欢迎使用自制Linux安装脚本
-  0.退出脚本
-  1.安装Docker
-  2.安装x-ui
-  3.安装更新必要依赖
-  4.安装acme脚本
-  5.全部安装
+  欢迎使用自制Linux安装脚本：
+  0.退出脚本            1.安装 Docker
+  2.安装 v2ray管理面版   3.安装 更新必要依赖
+  4.安装 acme脚本       5.全部安装
     """
           )
     nu = input("输入你的选择[0-5]：")
@@ -36,7 +33,7 @@ def home():
     if nu == "5":
         allinstall()
     else:
-        print("输入错误，请重新选择\n")
+        print("\n输入错误，请重新选择\n")
         home()
 
 
@@ -65,9 +62,9 @@ def install_acme():
     email = input("输入你的邮箱地址：")
     domain = input("输入要安装证书的域名：")
     os.system(f"curl https://get.acme.sh | sh -s email={email}")
-    print("开始安装证书\n")
+    print("\n开始安装证书\n")
     os.system(f"~/.acme.sh/acme.sh --issue -d {domain} --standalone")
-    print("开始复制证书到本地\n")
+    print("\n开始复制证书到本地\n")
     os.system("~/.acme.sh/acme.sh --install-cert -d --key-file /root/private.key --fullchain-file /root/cert.crt")
     home()
 
