@@ -52,7 +52,7 @@ def install_xui():
 
 def install_yil():
     os.system("apt-get update && apt upgrade -y")
-    os.system("apt-get install socat git curl vim wget")
+    os.system("apt-get install socat git curl vim wget ffmpeg -y")
     home()
 
 
