@@ -12,6 +12,5 @@ python3 <(curl -fsSL https://raw.githubusercontent.com/mrliucn/bashScript/main/t
 
 ![https://iili.io/MwF2Ox.jpg](https://iili.io/MwF2Ox.jpg)
 
-![img]https://iili.io/MwFJHb.jpg[/img]
+![img](https://iili.io/MwFJHb.jpg)
 
-![](https://iili.io/MVtTSn.png)
